@@ -1,3 +1,29 @@
 <resources>
-    <string name="app_name">SmartVIPParking</string>
+    <string name="app_name">Smart VIP Parking</string>
+    <string name="welcome_owner">Hello, Vehicle Owner</string>
+    <string name="welcome_name">Welcome, %1$s</string>
+    <string name="vip_member">VIP Member</string>
+    <string name="your_qr_token">Your QR Token</string>
+    <string name="qr_token_desc">Tap to show your parking access code</string>
+    <string name="my_profile">My Profile</string>
+    <string name="vehicles">Vehicles</string>
+    <string name="history">History</string>
+    <string name="invoices">Invoices</string>
+    <string name="find_parking">Find Parking</string>
+    <string name="charges">Charges</string>
+    <string name="overdue">Overdue</string>
+    <string name="logout">Logout</string>
+    
+    <string name="logout_confirm_title">Logout</string>
+    <string name="logout_confirm_msg">Are you sure you want to sign out?</string>
+    <string name="logout_yes">Logout</string>
+    <string name="logout_no">Stay</string>
+    
+    <string name="qr_dialog_title">Your Access Pass</string>
+    <string name="qr_dialog_msg">Scan this QR at the parking entry/exit.</string>
+    <string name="qr_dialog_close">Done</string>
+    
+    <string name="feature_coming_soon">%1$s module is coming soon!</string>
+    <string name="error_load_profile">Failed to load profile: %1$s</string>
+    <string name="error_qr_gen">Error generating QR code</string>
 </resources>

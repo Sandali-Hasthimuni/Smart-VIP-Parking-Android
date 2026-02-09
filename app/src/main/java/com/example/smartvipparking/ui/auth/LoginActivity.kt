@@ -4,9 +4,12 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.smartvipparking.R
+import com.example.smartvipparking.ui.dashboard.AdminDashboardActivity
+import com.example.smartvipparking.ui.dashboard.OwnerDashboardActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 
@@ -16,6 +19,9 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var emailInput: EditText
     private lateinit var passwordInput: EditText
     private lateinit var loginButton: Button
+    private lateinit var registerLink: TextView
+
+    private val DB_URL = "https://smartvipparking-f3e3c-default-rtdb.asia-southeast1.firebasedatabase.app/"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,6 +32,7 @@ class LoginActivity : AppCompatActivity() {
         emailInput = findViewById(R.id.email_input)
         passwordInput = findViewById(R.id.password_input)
         loginButton = findViewById(R.id.login_button)
+        registerLink = findViewById(R.id.register_link)
 
         loginButton.setOnClickListener {
             val email = emailInput.text.toString().trim()
@@ -37,6 +44,10 @@ class LoginActivity : AppCompatActivity() {
             }
 
             loginUser(email, password)
+        }
+
+        registerLink.setOnClickListener {
+            startActivity(Intent(this, RegisterActivity::class.java))
         }
     }
 
@@ -55,7 +66,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun checkUserRole(userId: String) {
-        val dbRef = FirebaseDatabase.getInstance().reference
+        val dbRef = FirebaseDatabase.getInstance(DB_URL).reference
 
         // Check Admin
         dbRef.child("Admins").child(userId).get().addOnSuccessListener { snapshot ->
@@ -73,6 +84,8 @@ class LoginActivity : AppCompatActivity() {
                     }
                 }
             }
+        }.addOnFailureListener {
+            Toast.makeText(this, "Error checking user role: ${it.message}", Toast.LENGTH_SHORT).show()
         }
     }
 }

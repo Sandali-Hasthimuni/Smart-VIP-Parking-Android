@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "601749340847",
+    "project_id": "smartvipparking-f3e3c",
+    "storage_bucket": "smartvipparking-f3e3c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:601749340847:android:7e67df307ceefff8888a5a",
+        "android_client_info": {
+          "package_name": "com.example.smartvipparking"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBC5pMqC1RgafQJUqgw6XbYQq4ZxPNpySE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

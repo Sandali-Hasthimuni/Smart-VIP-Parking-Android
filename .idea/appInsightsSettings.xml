@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.example.smartvipparking" />
+                  <option name="mobileSdkAppId" value="1:601749340847:android:7e67df307ceefff8888a5a" />
+                  <option name="projectId" value="smartvipparking-f3e3c" />
+                  <option name="projectNumber" value="601749340847" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

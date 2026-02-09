@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/admin_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Admin Dashboard"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_scan_qr"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:text="Scan Parking QR"
+        android:layout_marginTop="24dp"
+        app:icon="@android:drawable/ic_menu_camera"
+        app:layout_constraintTop_toBottomOf="@id/admin_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_manage_users"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Manage Users"
+        app:layout_constraintTop_toBottomOf="@id/btn_scan_qr"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_manage_vehicles"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Manage Vehicles"
+        app:layout_constraintTop_toBottomOf="@id/btn_manage_users"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_manage_parking"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Manage Parking"
+        app:layout_constraintTop_toBottomOf="@id/btn_manage_vehicles"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_reports"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Reports"
+        app:layout_constraintTop_toBottomOf="@id/btn_manage_parking"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
