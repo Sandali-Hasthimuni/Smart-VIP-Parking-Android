@@ -1,19 +1,23 @@
 package com.example.smartvipparking.ui.dashboard
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.smartvipparking.databinding.ActivityGenericPlaceholderBinding
+import com.example.smartvipparking.databinding.ActivityOverdueBinding
 
 class OverdueActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityGenericPlaceholderBinding
+    private lateinit var binding: ActivityOverdueBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityGenericPlaceholderBinding.inflate(layoutInflater)
+        binding = ActivityOverdueBinding.inflate(layoutInflater)
         setContentView(binding.root)
         
-        binding.toolbar.title = "Overdue Payments"
         binding.toolbar.setNavigationOnClickListener { finish() }
-        binding.tvPlaceholder.text = "You have no overdue payments at this time."
+        
+        binding.btnViewHistory.setOnClickListener {
+            startActivity(Intent(this, HistoryActivity::class.java))
+            finish()
+        }
     }
 }
